@@ -1,0 +1,34 @@
+package demo1;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.Test;
+
+public class AsserTest {
+	
+	WebDriver driver = null;
+	
+	
+	public void SetDriver() {
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Drivers\\chromedriver.exe");
+		 driver = new ChromeDriver();
+		 driver.manage().window().maximize();
+	}
+	
+	@Test
+	public void verifytitle() {
+		driver.get("https://www.amazon.com");
+		String ActualTitle =  driver.getTitle();
+		String ExpectedTitle = "Amazon.com: Online Shopping for Electronics, Apparel,Computers, Books, DVDs &amp; more";
+				Assert.assertEquals(ActualTitle, ExpectedTitle);
+				System.out.println("Assert passed");
+	}
+	
+	@AfterTest
+	public void Terminate() {
+		driver.close();
+	}
+
+}

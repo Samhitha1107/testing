@@ -1,0 +1,60 @@
+package trial;
+
+import java.time.Duration;
+import java.util.NoSuchElementException;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+public class Calculatordemo {
+	private static final String SECONDS = null;
+	WebDriver driver = null;
+	public void calculations() {
+		@SuppressWarnings("unused")
+		final String SECONDS = null;
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Drivers\\chromedriver.exe");
+		driver = new ChromeDriver();
+		
+		
+	}
+	
+	@BeforeTest
+	public void launchapp() throws InterruptedException {
+		
+		Thread.sleep(1000, 20);
+		
+		driver.navigate().to("https://www.calculator.net/");
+		driver.manage().window().maximize();
+		
+	}
+	@Test
+	public void calculatepercent() {
+		
+		driver.findElement(By.className("scinm")).click();
+		driver.findElement(By.className("sciop")).click();
+		driver.findElement(By.className("scinm")).click();
+		driver.findElement(By.className("sciop")).click();
+		
+		
+		
+	}
+	
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	@AfterTest
+	public void terminatetest() {
+		
+		Thread.sleep(200, 10);
+		driver.close();
+	}
+	public static String getSeconds() {
+		return SECONDS;
+	}
+
+}

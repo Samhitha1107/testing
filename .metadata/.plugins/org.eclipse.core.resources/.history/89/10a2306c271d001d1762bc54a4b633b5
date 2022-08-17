@@ -1,0 +1,70 @@
+package newpackage;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+public class Flipkart {
+	WebDriver driver = null;
+	
+	@BeforeTest
+	public void setup() {
+		@SuppressWarnings("unused")
+		String 
+		projectPath = System.getProperty("user.dir");
+		
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Drivers\\chromedriver.exe");
+		 driver = new ChromeDriver();
+	}
+	
+	@Test
+	public void flipkartopen() throws InterruptedException {
+		driver.get("https://www.flipkart.com/");
+		driver.manage().window().maximize();
+		Thread.sleep(2000, 20);
+		driver.findElement(By.xpath("//button[@class='_2KpZ6l _2doB4z']")).click();
+		driver.findElement(By.xpath("//input[@type='text']")).sendKeys("powerbank");
+		
+		Thread.sleep(1000, 10);
+		driver.findElement(By.xpath("//button[@type='submit']")).click();
+		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+	    js.executeScript("window.scrollBy(0,1500)", "");
+	    
+	    Thread.sleep(1000, 10);
+	    
+	    driver.findElement(By.xpath("//div[contains(text(),'Brand')]")).click();
+	    Thread.sleep(2000, 20);
+	    
+	    driver.findElement(By.xpath("//div[@class='_3879cV'][contains(text(),'Ambrane')]")).click();
+	    Thread.sleep(2000, 20);
+	    
+	    driver.findElement(By.xpath("//div[@class='_4ddWXP']")).click();
+	    Thread.sleep(2000, 20);
+	    
+	    JavascriptExecutor js1 = (JavascriptExecutor) driver;
+	    js1.executeScript("window.scrollBy(0,1500)", "");
+	    
+	    Thread.sleep(1000, 10);
+	    
+	    driver.findElement(By.xpath("//input[@type='text']")).sendKeys("560028");
+	    Thread.sleep(2000, 10);
+	    
+//	    driver.findElement(By.xpath("//span[@class='_2P_LDn']")).click();
+//	    Thread.sleep(2000, 20);
+	    
+	    driver.findElement(By.cssSelector("div._2c7YLP.UtUXW0._6t1WkM._3HqJxg div._1YokD2._2GoDe3 div._1YokD2._3Mn1Gg.col-5-12._78xt5Y:nth-child(1) div._1AtVbE.col-12-12:nth-child(2) div._1p3MFP.dTTu2M ul.row li.col.col-6-12:nth-child(1) > button._2KpZ6l._2U9uOA._3v1-ww")).click();
+	    Thread.sleep(2000, 20);
+	 
+	    driver.close();
+	    	
+	    
+	    
+		
+	}
+	
+
+}

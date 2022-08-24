@@ -97,6 +97,12 @@ public class Flipkartdynamic {
 		
 	}
 	
+	@Test
+	public void openproduct() throws InterruptedException {
+		driver.findElement(By.xpath("//*[@id=\"container\"]/div/div[3]/div[1]/div[2]/div[2]/div/div[1]/div/a[2]")).click();
+		driver.wait(3000);
+	}
+	
 	@AfterTest
 	public void terminate() {
 		driver.close();

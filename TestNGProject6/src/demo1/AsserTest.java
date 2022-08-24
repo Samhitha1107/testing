@@ -25,6 +25,7 @@ WebDriver driver = null;
 	
 	@Test
 	public void verifytitle() throws InterruptedException {
+		
 		driver.get("https://www.google.com/");
 		Thread.sleep(2000, 20);
 		//search on google

@@ -1,86 +1,138 @@
 package newpackage;
 
+ import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class Flipkart {
-	WebDriver driver = null;
-	
+	static WebDriver driver = null;
+
 	@BeforeTest
 	public void setup() {
 		@SuppressWarnings("unused")
-		String 
-		projectPath = System.getProperty("user.dir");
-		
+		String projectPath = System.getProperty("user.dir");
+
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Drivers\\chromedriver.exe");
-		 driver = new ChromeDriver();
+		driver = new ChromeDriver();
 	}
-	
+
 	@Test
-	public void flipkartopen() throws InterruptedException {
+	public void aflipkartopen() throws InterruptedException {
 		driver.get("https://www.flipkart.com/");
+		driver.findElement(By.xpath("//button[@class='_2KpZ6l _2doB4z']")).click();
 		driver.manage().window().maximize();
 		Thread.sleep(2000, 20);
-		
-		//login flipkart
-		driver.findElement(By.xpath("//button[@class='_2KpZ6l _2doB4z']")).click();
-		driver.findElement(By.xpath("//a[@class='_1_3w1N']")).click();
-		driver.findElement(By.xpath("//div[@class='IiD88i _351hSN']//input[@type='text']")).sendKeys("9620614054");
-		Thread.sleep(1000, 30);
-		driver.findElement(By.xpath("//input[@type='password']")).sendKeys("01071999");
-		Thread.sleep(1000, 30);
-		
-	driver.findElement(By.xpath("//button[@type='submit']//span[contains(text(),'Login')]")).click();
-		
-		//flipkart search
-		driver.findElement(By.xpath("//div[contains(text(),'Travel')]")).click();
-		Thread.sleep(2000, 20);
-		driver.get("https://www.flipkart.com/books-store?fm=neo%2Fmerchandising&iid=M_358ff965-c315-4cb4-b8a5-35a7f0c3bf71_1_372UD5BXDFYS_MC.WKV8I2UZ8OZC&otracker=hp_rich_navigation_8_1.navigationCard.RICH_NAVIGATION_Beauty%252C%2BToys%2B%2526%2BMore~Books_WKV8I2UZ8OZC&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_8_L1_view-all&cid=WKV8I2UZ8OZC");
-		
-		Thread.sleep(2000, 20);
-		
-		//scroll
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-	    js.executeScript("window.scrollBy(0,1500)", "");
-	    
-	    Thread.sleep(1000, 10);
-	    
-	    //select brand
-//	    driver.findElement(By.xpath("//div[contains(text(),'Brand')]")).click();
-//	    Thread.sleep(2000, 20);
-//	    
-//	    driver.findElement(By.xpath("//div[@class='_3879cV'][contains(text(),'Mi')]")).click();
-//	    Thread.sleep(2000, 20);
-//	    
-//	    driver.findElement(By.xpath("//a[@class='s1Q9rs']")).click();
-//	    Thread.sleep(2000, 20);
-//	    
-//	    JavascriptExecutor js1 = (JavascriptExecutor) driver;
-//	    js1.executeScript("window.scrollBy(0,2000)", "");
-//	    
-//	    Thread.sleep(1000, 10);
-////	    
-//	    driver.findElement(By.id("pincodeInputId")).sendKeys("560028");////input[@id='pincodeInputId']
-//	    Thread.sleep(4000, 10);
-////	    
-//	    driver.findElement(By.xpath("//span[@class='_2P_LDn']")).click();
-//	    Thread.sleep(2000, 20);
-	    
-//	    driver.findElement(By.xpath("//button[@class='_2KpZ6l _2U9uOA _3v1-ww']")).click();
-//	    Thread.sleep(2000, 20);
-	   
-	 
-	    driver.close();
-	    driver.quit();
-	    	
-	    
-	    
-		
-	}
-	
 
+		String expected = driver.getTitle();
+		String actualURL = "Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books & More. Best Offers!";
+		Assert.assertEquals(expected, actualURL);
+		System.out.println("Assert passed");
+
+	}
+
+	@Test
+	public void bsearch() throws InterruptedException {
+		
+		//search for watches
+		WebElement searchbox = driver
+				.findElement(By.xpath("//*[@id=\"container\"]/div/div[1]/div[1]/div[2]/div[2]/form/div/div/input"));
+		searchbox.sendKeys("watches");
+		searchbox.submit();
+		Thread.sleep(2000, 20);
+		String expected1 = driver.getTitle();
+		String actualURL1 = driver.getTitle();
+		Assert.assertEquals(expected1, actualURL1);
+		System.out.println("Assert passed");
+
+	}
+
+	@SuppressWarnings("deprecation")
+	@Test
+	public void citemclick() throws InterruptedException {
+
+		ArrayList<String> AllProducts = new ArrayList<String>(driver.getWindowHandles());
+		driver.switchTo().window(AllProducts.get(0));
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,3000)");
+		driver.switchTo().defaultContent(); // Come out of iframe.
+		Thread.sleep(2000, 20);
+		
+		//moves to top of the page after scrolll
+		driver.findElement(By.xpath("//div[@class='bra6U8 HL5oOQ']")).click();
+		Thread.sleep(2000, 20);
+		
+		//click on couple checkbox
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		WebElement ele = driver.findElement(By.xpath("(//div[contains(text(),'Couple')])"));
+		Thread.sleep(2000, 30);
+		@SuppressWarnings("unused")
+		String text = ele.getText();
+		JavascriptExecutor jse = (JavascriptExecutor) driver;
+		jse.executeScript("arguments[0].click()", ele);
+		Thread.sleep(4000, 30);
+		String expected1 = driver.getTitle();
+		String actualURL1 = driver.getTitle();
+		Assert.assertEquals(expected1, actualURL1);
+		System.out.println("Assert passed");
+
+	}
+
+	@Test
+	public void dproductopen() throws InterruptedException {
+		
+		//click on the first element using this class name 
+		driver.findElement(By.xpath("//a[@class='IRpwTa']")).click();
+		Thread.sleep(3000, 40);
+		String expected1 = driver.getTitle();
+		String actualURL1 = driver.getTitle();
+		Assert.assertEquals(expected1, actualURL1);
+		System.out.println("Assert passed");
+
+	}
+
+	@SuppressWarnings("deprecation")
+	@Test
+	public void eaddtocart() throws InterruptedException {
+		//switch to next tab
+		ArrayList<String> AllTabs = new ArrayList<String>(driver.getWindowHandles());
+		driver.switchTo().window(AllTabs.get(1));
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,1000)");
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
+		//click on delivery pincode and search for required pincode
+		WebElement code = driver.findElement(By.xpath("//input[@class='cfnctZ']"));
+		code.sendKeys("560028");
+		driver.findElement(By.xpath("//span[@class='UgLoKg']")).click();
+		Thread.sleep(2000, 20);
+		String expected1 = driver.getTitle();
+		String actualURL1 = driver.getTitle();
+		Assert.assertEquals(expected1, actualURL1);
+		System.out.println("Assert passed");
+		
+		//click on check
+		driver.findElement(By.xpath("//button[@class='_2KpZ6l _2U9uOA _3v1-ww']")).click();
+		Thread.sleep(4000, 20);
+		@SuppressWarnings("unused")
+		String expected11 = driver.getTitle();
+		@SuppressWarnings("unused")
+		String actualURL11 = driver.getTitle();
+		Assert.assertTrue(true);
+		System.out.println("Assert passed");
+		driver.quit();
+
+	}
+	public static void assertNull(Object object) {
+		WebElement demo = driver.findElement(By.xpath("//button[@class='_2MMH-I']"));
+		demo.click();
+		Assert.assertNull(demo);
+	}
 }

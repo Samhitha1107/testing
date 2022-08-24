@@ -5,8 +5,8 @@
     <classes>
       <class name="newpackage.Flipkart">
         <methods>
-          <include name="flipkartopen"/>
           <include name="setup"/>
+          <include name="eaddtocart"/>
         </methods>
       </class> <!-- newpackage.Flipkart -->
     </classes>

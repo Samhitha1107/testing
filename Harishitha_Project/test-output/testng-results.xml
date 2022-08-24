@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-08-22T15:20:18 IST" name="Default suite" finished-at="2022-08-22T15:20:44 IST" duration-ms="26032">
+    <groups>
+    </groups>
+    <test started-at="2022-08-22T15:20:18 IST" name="Default test" finished-at="2022-08-22T15:20:44 IST" duration-ms="26032">
+      <class name="projecttrial.app1">
+        <test-method is-config="true" signature="setup()[pri:0, instance:projecttrial.app1@40ef3420]" started-at="2022-08-22T15:20:18 IST" name="setup" finished-at="2022-08-22T15:20:20 IST" duration-ms="2177" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="aflipkartopen()[pri:0, instance:projecttrial.app1@40ef3420]" started-at="2022-08-22T15:20:20 IST" name="aflipkartopen" finished-at="2022-08-22T15:20:24 IST" duration-ms="4657" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aflipkartopen -->
+        <test-method signature="bsearch()[pri:0, instance:projecttrial.app1@40ef3420]" started-at="2022-08-22T15:20:24 IST" name="bsearch" finished-at="2022-08-22T15:20:27 IST" duration-ms="2151" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bsearch -->
+        <test-method signature="citemclick()[pri:0, instance:projecttrial.app1@40ef3420]" started-at="2022-08-22T15:20:27 IST" name="citemclick" finished-at="2022-08-22T15:20:35 IST" duration-ms="8152" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- citemclick -->
+        <test-method signature="dopenproduct()[pri:0, instance:projecttrial.app1@40ef3420]" started-at="2022-08-22T15:20:35 IST" name="dopenproduct" finished-at="2022-08-22T15:20:39 IST" duration-ms="4117" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dopenproduct -->
+        <test-method signature="eopencart()[pri:0, instance:projecttrial.app1@40ef3420]" started-at="2022-08-22T15:20:39 IST" name="eopencart" finished-at="2022-08-22T15:20:44 IST" duration-ms="4741" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- eopencart -->
+      </class> <!-- projecttrial.app1 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

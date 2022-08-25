@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-08-23T11:05:32 IST" name="Default suite" finished-at="2022-08-23T11:06:06 IST" duration-ms="33904">
+  <suite started-at="2022-08-24T17:28:39 IST" name="Default suite" finished-at="2022-08-24T17:29:16 IST" duration-ms="36978">
     <groups>
     </groups>
-    <test started-at="2022-08-23T11:05:32 IST" name="Default test" finished-at="2022-08-23T11:06:06 IST" duration-ms="33904">
+    <test started-at="2022-08-24T17:28:39 IST" name="Default test" finished-at="2022-08-24T17:29:16 IST" duration-ms="36978">
       <class name="newpackage.Flipkart">
-        <test-method is-config="true" signature="setup()[pri:0, instance:newpackage.Flipkart@7fa98a66]" started-at="2022-08-23T11:05:32 IST" name="setup" finished-at="2022-08-23T11:05:34 IST" duration-ms="2463" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:newpackage.Flipkart@6973b51b]" started-at="2022-08-24T17:28:39 IST" name="setup" finished-at="2022-08-24T17:28:41 IST" duration-ms="2083" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="aflipkartopen()[pri:0, instance:newpackage.Flipkart@7fa98a66]" started-at="2022-08-23T11:05:34 IST" name="aflipkartopen" finished-at="2022-08-23T11:05:39 IST" duration-ms="4142" status="PASS">
+        <test-method signature="aflipkartopen()[pri:0, instance:newpackage.Flipkart@6973b51b]" started-at="2022-08-24T17:28:41 IST" name="aflipkartopen" finished-at="2022-08-24T17:28:46 IST" duration-ms="4584" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aflipkartopen -->
-        <test-method signature="bsearch()[pri:0, instance:newpackage.Flipkart@7fa98a66]" started-at="2022-08-23T11:05:39 IST" name="bsearch" finished-at="2022-08-23T11:05:41 IST" duration-ms="2155" status="PASS">
+        <test-method signature="bsearch()[pri:0, instance:newpackage.Flipkart@6973b51b]" started-at="2022-08-24T17:28:46 IST" name="bsearch" finished-at="2022-08-24T17:28:48 IST" duration-ms="2181" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bsearch -->
-        <test-method signature="citemclick()[pri:0, instance:newpackage.Flipkart@7fa98a66]" started-at="2022-08-23T11:05:41 IST" name="citemclick" finished-at="2022-08-23T11:05:51 IST" duration-ms="10344" status="PASS">
+        <test-method signature="citemclick()[pri:0, instance:newpackage.Flipkart@6973b51b]" started-at="2022-08-24T17:28:48 IST" name="citemclick" finished-at="2022-08-24T17:28:59 IST" duration-ms="10373" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- citemclick -->
-        <test-method signature="dproductopen()[pri:0, instance:newpackage.Flipkart@7fa98a66]" started-at="2022-08-23T11:05:51 IST" name="dproductopen" finished-at="2022-08-23T11:05:54 IST" duration-ms="3165" status="PASS">
+        <test-method signature="dproductopen()[pri:0, instance:newpackage.Flipkart@6973b51b]" started-at="2022-08-24T17:28:59 IST" name="dproductopen" finished-at="2022-08-24T17:29:02 IST" duration-ms="3134" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dproductopen -->
-        <test-method signature="eaddtocart()[pri:0, instance:newpackage.Flipkart@7fa98a66]" started-at="2022-08-23T11:05:54 IST" name="eaddtocart" finished-at="2022-08-23T11:06:06 IST" duration-ms="11595" status="PASS">
+        <test-method signature="eaddtocart()[pri:0, instance:newpackage.Flipkart@6973b51b]" started-at="2022-08-24T17:29:02 IST" name="eaddtocart" finished-at="2022-08-24T17:29:16 IST" duration-ms="14581" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- eaddtocart -->

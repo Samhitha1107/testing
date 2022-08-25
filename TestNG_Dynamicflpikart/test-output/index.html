@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-failed">Suite</span>
+              <span class="suite-name border-passed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,21 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">8 methods, 1 failed,   7 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Suite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="dynamic.Flipkartdynamic" class="method navigator-link" hash-for-method="openproduct">openproduct</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Suite -->
+                    <span class="method-stats">10 methods,   10 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -151,6 +137,21 @@
                         <a href="#" panel-name="suite-Suite" title="dynamic.Flipkartdynamic" class="method navigator-link" hash-for-method="openproduct">openproduct</a> <!-- method navigator-link -->
                       </span>
                       <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="dynamic.Flipkartdynamic" class="method navigator-link" hash-for-method="openproduct">openproduct</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="dynamic.Flipkartdynamic" class="method navigator-link" hash-for-method="share">share</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="dynamic.Flipkartdynamic" class="method navigator-link" hash-for-method="share">share</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
@@ -163,44 +164,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">dynamic.Flipkartdynamic</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="openproduct">
-                  </a> <!-- openproduct -->
-                  <span class="method-name">openproduct</span>
-                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
-  (Session info: chrome=104.0.5112.102)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
-Build info: version: &apos;4.3.0&apos;, revision: &apos;a4995e2c09*&apos;
-System info: host: &apos;DESKTOP-2F680I6&apos;, ip: &apos;172.20.1.230&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [48a1bb135aba19f7fc1ce7fbecd2dc75, clickElement {id=970bdcd3-9326-4c04-a315-2c5f15fc6144}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:59968}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59968/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (48a1bb135aba19f7fc1ce7fbecd2dc75)] -&gt; xpath: //*[@id=&quot;container&quot;]/div/div[3]/div[1]/div[2]/div[2]/div/div[1]/div/a[2]]
-Session ID: 48a1bb135aba19f7fc1ce7fbecd2dc75
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
-	at dynamic.Flipkartdynamic.openproduct(Flipkartdynamic.java:102)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 28 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -254,6 +217,27 @@ Session ID: 48a1bb135aba19f7fc1ce7fbecd2dc75
                   <a name="openproduct">
                   </a> <!-- openproduct -->
                   <span class="method-name">openproduct</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="openproduct">
+                  </a> <!-- openproduct -->
+                  <span class="method-name">openproduct</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="share">
+                  </a> <!-- share -->
+                  <span class="method-name">share</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="share">
+                  </a> <!-- share -->
+                  <span class="method-name">share</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -320,44 +304,52 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(8);
+data.addRows(10);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'aflipkartopen')
 data.setCell(0, 2, 'dynamic.Flipkartdynamic')
-data.setCell(0, 3, 10098);
+data.setCell(0, 3, 15060);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'aflipkartopen')
 data.setCell(1, 2, 'dynamic.Flipkartdynamic')
-data.setCell(1, 3, 7167);
+data.setCell(1, 3, 7060);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'bopenoffers')
 data.setCell(2, 2, 'dynamic.Flipkartdynamic')
-data.setCell(2, 3, 6119);
+data.setCell(2, 3, 6128);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'bopenoffers')
 data.setCell(3, 2, 'dynamic.Flipkartdynamic')
 data.setCell(3, 3, 6106);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'openproduct')
+data.setCell(4, 1, 'share')
 data.setCell(4, 2, 'dynamic.Flipkartdynamic')
-data.setCell(4, 3, 2154);
+data.setCell(4, 3, 4188);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'cclickoffer')
+data.setCell(5, 1, 'share')
 data.setCell(5, 2, 'dynamic.Flipkartdynamic')
-data.setCell(5, 3, 342);
+data.setCell(5, 3, 4149);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'openproduct')
 data.setCell(6, 2, 'dynamic.Flipkartdynamic')
-data.setCell(6, 3, 267);
+data.setCell(6, 3, 2288);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'cclickoffer')
+data.setCell(7, 1, 'openproduct')
 data.setCell(7, 2, 'dynamic.Flipkartdynamic')
-data.setCell(7, 3, 160);
+data.setCell(7, 3, 2245);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'cclickoffer')
+data.setCell(8, 2, 'dynamic.Flipkartdynamic')
+data.setCell(8, 3, 361);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'cclickoffer')
+data.setCell(9, 2, 'dynamic.Flipkartdynamic')
+data.setCell(9, 3, 172);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 32 seconds</span>
+              <span class="suite-total-time">Total running time: 47 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -390,49 +382,55 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">aflipkartopen</span>
-                <span class="method-start">2080 ms</span>
+                <span class="method-start">2310 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">bopenoffers</span>
-                <span class="method-start">9250 ms</span>
+                <span class="method-start">9375 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">cclickoffer</span>
-                <span class="method-start">15370 ms</span>
+                <span class="method-start">15504 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">openproduct</span>
-                <span class="method-start">15532 ms</span>
+                <span class="method-start">15680 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">share</span>
+                <span class="method-start">17970 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">terminate</span>
-                <span class="method-start">15806 ms</span>
+                <span class="method-start">22161 ms</span>
               </div> <!-- configuration-test after -->
               <div class="configuration-test before">
                 <span class="method-name">differtbrowser(firefox)</span>
-                <span class="method-start">18387 ms</span>
+                <span class="method-start">22526 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">aflipkartopen</span>
-                <span class="method-start">22523 ms</span>
+                <span class="method-start">26471 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">bopenoffers</span>
-                <span class="method-start">32623 ms</span>
+                <span class="method-start">41533 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">cclickoffer</span>
-                <span class="method-start">38730 ms</span>
+                <span class="method-start">47642 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">openproduct</span>
-                <span class="method-start">39073 ms</span>
+                <span class="method-start">48005 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">share</span>
+                <span class="method-start">50252 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">terminate</span>
-                <span class="method-start">41230 ms</span>
+                <span class="method-start">54403 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

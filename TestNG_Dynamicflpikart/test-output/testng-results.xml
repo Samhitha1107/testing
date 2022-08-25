@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="8" passed="7" failed="1" skipped="0">
+<testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-08-24T16:44:06 IST" name="Suite" finished-at="2022-08-24T16:44:48 IST" duration-ms="42922">
+  <suite started-at="2022-08-25T15:29:53 IST" name="Suite" finished-at="2022-08-25T15:30:49 IST" duration-ms="55673">
     <groups>
     </groups>
-    <test started-at="2022-08-24T16:44:06 IST" name="Testcasechrome" finished-at="2022-08-24T16:44:24 IST" duration-ms="18357">
+    <test started-at="2022-08-25T15:29:53 IST" name="Testcasechrome" finished-at="2022-08-25T15:30:16 IST" duration-ms="22495">
       <class name="dynamic.Flipkartdynamic">
-        <test-method is-config="true" signature="differtbrowser(java.lang.String)[pri:0, instance:dynamic.Flipkartdynamic@f5ac9e4]" started-at="2022-08-24T16:44:06 IST" name="differtbrowser" finished-at="2022-08-24T16:44:08 IST" duration-ms="2062" status="PASS">
+        <test-method is-config="true" signature="differtbrowser(java.lang.String)[pri:0, instance:dynamic.Flipkartdynamic@59fd97a8]" started-at="2022-08-25T15:29:53 IST" name="differtbrowser" finished-at="2022-08-25T15:29:56 IST" duration-ms="2284" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,97 +18,35 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- differtbrowser -->
-        <test-method signature="aflipkartopen()[pri:0, instance:dynamic.Flipkartdynamic@f5ac9e4]" started-at="2022-08-24T16:44:08 IST" name="aflipkartopen" finished-at="2022-08-24T16:44:15 IST" duration-ms="7167" status="PASS">
+        <test-method signature="aflipkartopen()[pri:0, instance:dynamic.Flipkartdynamic@59fd97a8]" started-at="2022-08-25T15:29:56 IST" name="aflipkartopen" finished-at="2022-08-25T15:30:03 IST" duration-ms="7060" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aflipkartopen -->
-        <test-method signature="bopenoffers()[pri:0, instance:dynamic.Flipkartdynamic@f5ac9e4]" started-at="2022-08-24T16:44:15 IST" name="bopenoffers" finished-at="2022-08-24T16:44:21 IST" duration-ms="6119" status="PASS">
+        <test-method signature="bopenoffers()[pri:0, instance:dynamic.Flipkartdynamic@59fd97a8]" started-at="2022-08-25T15:30:03 IST" name="bopenoffers" finished-at="2022-08-25T15:30:09 IST" duration-ms="6128" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bopenoffers -->
-        <test-method signature="cclickoffer()[pri:0, instance:dynamic.Flipkartdynamic@f5ac9e4]" started-at="2022-08-24T16:44:21 IST" name="cclickoffer" finished-at="2022-08-24T16:44:21 IST" duration-ms="160" status="PASS">
+        <test-method signature="cclickoffer()[pri:0, instance:dynamic.Flipkartdynamic@59fd97a8]" started-at="2022-08-25T15:30:09 IST" name="cclickoffer" finished-at="2022-08-25T15:30:09 IST" duration-ms="172" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cclickoffer -->
-        <test-method signature="openproduct()[pri:0, instance:dynamic.Flipkartdynamic@f5ac9e4]" started-at="2022-08-24T16:44:21 IST" name="openproduct" finished-at="2022-08-24T16:44:21 IST" duration-ms="267" status="FAIL">
-          <exception class="org.openqa.selenium.StaleElementReferenceException">
-            <message>
-              <![CDATA[stale element reference: element is not attached to the page document
-  (Session info: chrome=104.0.5112.102)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
-Build info: version: '4.3.0', revision: 'a4995e2c09*'
-System info: host: 'DESKTOP-2F680I6', ip: '172.20.1.230', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [48a1bb135aba19f7fc1ce7fbecd2dc75, clickElement {id=970bdcd3-9326-4c04-a315-2c5f15fc6144}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:59968}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59968/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (48a1bb135aba19f7fc1ce7fbecd2dc75)] -> xpath: //*[@id="container"]/div/div[3]/div[1]/div[2]/div[2]/div/div[1]/div/a[2]]
-Session ID: 48a1bb135aba19f7fc1ce7fbecd2dc75]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
-  (Session info: chrome=104.0.5112.102)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
-Build info: version: '4.3.0', revision: 'a4995e2c09*'
-System info: host: 'DESKTOP-2F680I6', ip: '172.20.1.230', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [48a1bb135aba19f7fc1ce7fbecd2dc75, clickElement {id=970bdcd3-9326-4c04-a315-2c5f15fc6144}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:59968}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59968/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (48a1bb135aba19f7fc1ce7fbecd2dc75)] -> xpath: //*[@id="container"]/div/div[3]/div[1]/div[2]/div[2]/div/div[1]/div/a[2]]
-Session ID: 48a1bb135aba19f7fc1ce7fbecd2dc75
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
-at dynamic.Flipkartdynamic.openproduct(Flipkartdynamic.java:102)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
+        <test-method signature="openproduct()[pri:0, instance:dynamic.Flipkartdynamic@59fd97a8]" started-at="2022-08-25T15:30:09 IST" name="openproduct" finished-at="2022-08-25T15:30:11 IST" duration-ms="2288" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openproduct -->
-        <test-method is-config="true" signature="terminate()[pri:0, instance:dynamic.Flipkartdynamic@f5ac9e4]" started-at="2022-08-24T16:44:21 IST" name="terminate" finished-at="2022-08-24T16:44:24 IST" duration-ms="2545" status="PASS">
+        <test-method signature="share()[pri:0, instance:dynamic.Flipkartdynamic@59fd97a8]" started-at="2022-08-25T15:30:11 IST" name="share" finished-at="2022-08-25T15:30:16 IST" duration-ms="4188" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- share -->
+        <test-method is-config="true" signature="terminate()[pri:0, instance:dynamic.Flipkartdynamic@59fd97a8]" started-at="2022-08-25T15:30:16 IST" name="terminate" finished-at="2022-08-25T15:30:16 IST" duration-ms="329" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- terminate -->
       </class> <!-- dynamic.Flipkartdynamic -->
     </test> <!-- Testcasechrome -->
-    <test started-at="2022-08-24T16:44:24 IST" name="Testcasefirefox" finished-at="2022-08-24T16:44:48 IST" duration-ms="24532">
+    <test started-at="2022-08-25T15:30:16 IST" name="Testcasefirefox" finished-at="2022-08-25T15:30:49 IST" duration-ms="33144">
       <class name="dynamic.Flipkartdynamic">
-        <test-method is-config="true" signature="differtbrowser(java.lang.String)[pri:0, instance:dynamic.Flipkartdynamic@35cabb2a]" started-at="2022-08-24T16:44:24 IST" name="differtbrowser" finished-at="2022-08-24T16:44:28 IST" duration-ms="4135" status="PASS">
+        <test-method is-config="true" signature="differtbrowser(java.lang.String)[pri:0, instance:dynamic.Flipkartdynamic@3a93b025]" started-at="2022-08-25T15:30:16 IST" name="differtbrowser" finished-at="2022-08-25T15:30:20 IST" duration-ms="3944" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -119,23 +57,27 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- differtbrowser -->
-        <test-method signature="aflipkartopen()[pri:0, instance:dynamic.Flipkartdynamic@35cabb2a]" started-at="2022-08-24T16:44:28 IST" name="aflipkartopen" finished-at="2022-08-24T16:44:38 IST" duration-ms="10098" status="PASS">
+        <test-method signature="aflipkartopen()[pri:0, instance:dynamic.Flipkartdynamic@3a93b025]" started-at="2022-08-25T15:30:20 IST" name="aflipkartopen" finished-at="2022-08-25T15:30:35 IST" duration-ms="15060" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aflipkartopen -->
-        <test-method signature="bopenoffers()[pri:0, instance:dynamic.Flipkartdynamic@35cabb2a]" started-at="2022-08-24T16:44:38 IST" name="bopenoffers" finished-at="2022-08-24T16:44:44 IST" duration-ms="6106" status="PASS">
+        <test-method signature="bopenoffers()[pri:0, instance:dynamic.Flipkartdynamic@3a93b025]" started-at="2022-08-25T15:30:35 IST" name="bopenoffers" finished-at="2022-08-25T15:30:41 IST" duration-ms="6106" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bopenoffers -->
-        <test-method signature="cclickoffer()[pri:0, instance:dynamic.Flipkartdynamic@35cabb2a]" started-at="2022-08-24T16:44:44 IST" name="cclickoffer" finished-at="2022-08-24T16:44:45 IST" duration-ms="342" status="PASS">
+        <test-method signature="cclickoffer()[pri:0, instance:dynamic.Flipkartdynamic@3a93b025]" started-at="2022-08-25T15:30:41 IST" name="cclickoffer" finished-at="2022-08-25T15:30:41 IST" duration-ms="361" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cclickoffer -->
-        <test-method signature="openproduct()[pri:0, instance:dynamic.Flipkartdynamic@35cabb2a]" started-at="2022-08-24T16:44:45 IST" name="openproduct" finished-at="2022-08-24T16:44:47 IST" duration-ms="2154" status="PASS">
+        <test-method signature="openproduct()[pri:0, instance:dynamic.Flipkartdynamic@3a93b025]" started-at="2022-08-25T15:30:41 IST" name="openproduct" finished-at="2022-08-25T15:30:44 IST" duration-ms="2245" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openproduct -->
-        <test-method is-config="true" signature="terminate()[pri:0, instance:dynamic.Flipkartdynamic@35cabb2a]" started-at="2022-08-24T16:44:47 IST" name="terminate" finished-at="2022-08-24T16:44:48 IST" duration-ms="1686" status="PASS">
+        <test-method signature="share()[pri:0, instance:dynamic.Flipkartdynamic@3a93b025]" started-at="2022-08-25T15:30:44 IST" name="share" finished-at="2022-08-25T15:30:48 IST" duration-ms="4149" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- share -->
+        <test-method is-config="true" signature="terminate()[pri:0, instance:dynamic.Flipkartdynamic@3a93b025]" started-at="2022-08-25T15:30:48 IST" name="terminate" finished-at="2022-08-25T15:30:49 IST" duration-ms="1265" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- terminate -->

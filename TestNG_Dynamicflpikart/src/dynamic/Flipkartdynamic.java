@@ -1,5 +1,8 @@
 package dynamic;
 
+import java.util.ArrayList;
+import java.util.Set;
+import java.util.StringJoiner;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -13,7 +16,9 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+//import org.openqa.selenium.JavascriptExecutor;
 
+@SuppressWarnings("unused")
 public class Flipkartdynamic {
 	
 	WebDriver driver = null;
@@ -41,6 +46,7 @@ public class Flipkartdynamic {
 	
 	@Test
 	public void aflipkartopen() throws InterruptedException {
+		Set<String> set= driver.getWindowHandles();
 		driver.get("https://www.flipkart.com/");
 		driver.findElement(By.xpath("//button[@class='_2KpZ6l _2doB4z']")).click();
 		driver.manage().window().maximize();
@@ -49,7 +55,7 @@ public class Flipkartdynamic {
 		String expected = driver.getTitle();
 		String actualURL = "Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books & More. Best Offers!";
 		Assert.assertEquals(expected, actualURL);
-		System.out.println("Assert passed");
+		System.out.println("Assert flpkart passed");
 		
 		//clicks top offers
 		driver.findElement(By.xpath("//div[@class='xtXmba']")).click();
@@ -58,7 +64,7 @@ public class Flipkartdynamic {
 		String expected1 = driver.getTitle();
 		String actualURL1 = "Flipkart Offers & Deals of the Day - Get Best Discounts on Mobiles, Electronics, Fashion & Home etc.";
 		Assert.assertEquals(expected1, actualURL1);
-		System.out.println("Assert passed");
+		System.out.println("Assert offers passed");
 	}
 	
 	@SuppressWarnings("deprecation")
@@ -80,7 +86,7 @@ public class Flipkartdynamic {
 		String expected1 = driver.getCurrentUrl();
 		String actualURL1 = driver.getCurrentUrl();
 		Assert.assertEquals(expected1, actualURL1);
-		System.out.println("Assert passed");
+		System.out.println("Assert flute passed");
 
 		
 	}
@@ -93,15 +99,61 @@ public class Flipkartdynamic {
 		String expected1 = driver.getCurrentUrl();
 		String actualURL1 = driver.getCurrentUrl();
 		Assert.assertEquals(expected1, actualURL1);
-		System.out.println("Assert passed");
+		System.out.println("Assert click on hight to low passed");
+		
 		
 	}
 	
 	@Test
 	public void openproduct() throws InterruptedException {
-		driver.findElement(By.xpath("//*[@id=\"container\"]/div/div[3]/div[1]/div[2]/div[2]/div/div[1]/div/a[2]")).click();
+		WebElement product = driver.findElement(By.xpath("//a[contains(text(),'Foxit Musical Professional Flutes Acrylic Bansuri ')]"));
+		String test = product.getText();
+		JavascriptExecutor jse = (JavascriptExecutor) driver;
+		jse.executeScript("arguments[0].click()", product);
 		Thread.sleep(2000, 20);
+
+		ArrayList<String> ProductPage = new ArrayList<String>(driver.getWindowHandles());
+		driver.switchTo().window(ProductPage.get(1));
+		
+		
+		String expected1 = driver.getCurrentUrl();
+		String actualURL1 = driver.getCurrentUrl();
+		Assert.assertEquals(expected1, actualURL1);
+		System.out.println("Assert product open passed");
 	}
+	
+	@Parameters("browser")
+	@Test
+	public void share() throws InterruptedException {
+		
+	WebElement share = driver.findElement(By.xpath("/html/body/div[1]/div/div[3]/div[1]/div[2]/div[5]/div/div/div[1]/div[2]/div/div[2]/div[1]/form/input"));
+	share.sendKeys("560028");
+	String text = share.getText();
+	JavascriptExecutor jse1 = (JavascriptExecutor) driver;
+	jse1.executeScript("arguments[0].click()", share);
+	Thread.sleep(4000, 30);
+	
+//	WebElement check = driver.findElement(By.xpath("/html/body/div[1]/div/div[3]/div[1]/div[2]/div[5]/div/div/div[1]/div[2]/div/div[2]/div[1]/span"));
+//	check.click();
+//	String text1 = check.getText();
+//	JavascriptExecutor jse2 = (JavascriptExecutor) driver;
+//	jse1.executeScript("arguments[0].click()", check);
+//	Thread.sleep(4000, 30);
+	
+	
+//	//*[@id="container"]/div/div[3]/div[1]/div[2]/div[5]/div/div/div[2]/div[2]/span
+//	
+//	WebElement viewdetails = driver.findElement(By.xpath("/html/body/div[1]/div/div[3]/div[1]/div[1]/div[2]/div/ul/li[1]/button/svg"));
+//	viewdetails.click();
+//	String text11 = viewdetails.getText();
+//	JavascriptExecutor jse21 = (JavascriptExecutor) driver;
+//	jse1.executeScript("arguments[0].click()", viewdetails);
+//	Thread.sleep(4000, 30);
+//	
+	
+	}
+	
+
 	
 	@AfterTest
 	public void terminate() {

@@ -1,28 +1,39 @@
 package newpackage;
 
- import java.util.ArrayList;
+ import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class Flipkart {
-	static WebDriver driver = null;
+	 WebDriver driver ;
 
+	@SuppressWarnings("unused")
 	@BeforeTest
-	public void setup() {
-		@SuppressWarnings("unused")
+	public void setup() throws MalformedURLException {
+		DesiredCapabilities caps = new DesiredCapabilities();
+			caps.setBrowserName("chrome");
+			//caps.setBrowserName("firefox");
+			
+		
+			 driver = new RemoteWebDriver(new URL("http://172.20.1.230:4444"), caps);
+		
 		String projectPath = System.getProperty("user.dir");
 
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Drivers\\chromedriver.exe");
-		driver = new ChromeDriver();
+//		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Drivers\\chromedriver.exe");
+//		driver = new ChromeDriver();
 	}
+	
 
 	@Test
 	public void aflipkartopen() throws InterruptedException {
@@ -34,7 +45,7 @@ public class Flipkart {
 		String expected = driver.getTitle();
 		String actualURL = "Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books & More. Best Offers!";
 		Assert.assertEquals(expected, actualURL);
-		System.out.println("Assert passed");
+		System.out.println("Assert flipkart opened");
 
 	}
 
@@ -50,7 +61,7 @@ public class Flipkart {
 		String expected1 = driver.getTitle();
 		String actualURL1 = driver.getTitle();
 		Assert.assertEquals(expected1, actualURL1);
-		System.out.println("Assert passed");
+		System.out.println("Assert watches are searched");
 
 	}
 
@@ -81,7 +92,7 @@ public class Flipkart {
 		String expected1 = driver.getTitle();
 		String actualURL1 = driver.getTitle();
 		Assert.assertEquals(expected1, actualURL1);
-		System.out.println("Assert passed");
+		System.out.println("Assert clicked on different element");
 
 	}
 
@@ -94,7 +105,7 @@ public class Flipkart {
 		String expected1 = driver.getTitle();
 		String actualURL1 = driver.getTitle();
 		Assert.assertEquals(expected1, actualURL1);
-		System.out.println("Assert passed");
+		System.out.println("Assert product opened");
 
 	}
 
@@ -126,13 +137,9 @@ public class Flipkart {
 		@SuppressWarnings("unused")
 		String actualURL11 = driver.getTitle();
 		Assert.assertTrue(true);
-		System.out.println("Assert passed");
+		System.out.println("Assert added to cart");
 		driver.quit();
 
 	}
-	public static void assertNull(Object object) {
-		WebElement demo = driver.findElement(By.xpath("//button[@class='_2MMH-I']"));
-		demo.click();
-		Assert.assertNull(demo);
-	}
+	
 }

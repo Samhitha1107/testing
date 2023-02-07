@@ -7,11 +7,14 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -23,10 +26,10 @@ public class Flipkart {
 	public void setup() throws MalformedURLException {
 		DesiredCapabilities caps = new DesiredCapabilities();
 			caps.setBrowserName("chrome");
-			//caps.setBrowserName("firefox");
+			caps.setPlatform(Platform.LINUX);
 			
 		
-			 driver = new RemoteWebDriver(new URL("http://172.20.1.230:4444"), caps);
+			 driver = new RemoteWebDriver(new URL( "http://localhost:4444/wd/hub"), caps);
 		
 		String projectPath = System.getProperty("user.dir");
 
@@ -138,8 +141,12 @@ public class Flipkart {
 		String actualURL11 = driver.getTitle();
 		Assert.assertTrue(true);
 		System.out.println("Assert added to cart");
+		
+	}
+	
+	@AfterTest
+	public void terminate() {
 		driver.quit();
 
 	}
-	
 }

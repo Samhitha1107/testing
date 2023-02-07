@@ -1,87 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-08-25T15:29:53 IST" name="Suite" finished-at="2022-08-25T15:30:49 IST" duration-ms="55673">
+  <suite started-at="2022-10-10T16:25:29 IST" name="Default suite" finished-at="2022-10-10T16:26:56 IST" duration-ms="87033">
     <groups>
     </groups>
-    <test started-at="2022-08-25T15:29:53 IST" name="Testcasechrome" finished-at="2022-08-25T15:30:16 IST" duration-ms="22495">
+    <test started-at="2022-10-10T16:25:29 IST" name="Default test" finished-at="2022-10-10T16:26:56 IST" duration-ms="87033">
       <class name="dynamic.Flipkartdynamic">
-        <test-method is-config="true" signature="differtbrowser(java.lang.String)[pri:0, instance:dynamic.Flipkartdynamic@59fd97a8]" started-at="2022-08-25T15:29:53 IST" name="differtbrowser" finished-at="2022-08-25T15:29:56 IST" duration-ms="2284" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
+        <test-method is-config="true" signature="setup()[pri:0, instance:dynamic.Flipkartdynamic@1da2cb77]" started-at="2022-10-10T16:25:29 IST" name="setup" finished-at="2022-10-10T16:25:51 IST" duration-ms="21593" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- differtbrowser -->
-        <test-method signature="aflipkartopen()[pri:0, instance:dynamic.Flipkartdynamic@59fd97a8]" started-at="2022-08-25T15:29:56 IST" name="aflipkartopen" finished-at="2022-08-25T15:30:03 IST" duration-ms="7060" status="PASS">
+        </test-method> <!-- setup -->
+        <test-method signature="aflipkartopen()[pri:0, instance:dynamic.Flipkartdynamic@1da2cb77]" started-at="2022-10-10T16:25:51 IST" name="aflipkartopen" finished-at="2022-10-10T16:26:44 IST" duration-ms="52995" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aflipkartopen -->
-        <test-method signature="bopenoffers()[pri:0, instance:dynamic.Flipkartdynamic@59fd97a8]" started-at="2022-08-25T15:30:03 IST" name="bopenoffers" finished-at="2022-08-25T15:30:09 IST" duration-ms="6128" status="PASS">
+        <test-method signature="bopenoffers()[pri:0, instance:dynamic.Flipkartdynamic@1da2cb77]" started-at="2022-10-10T16:26:44 IST" name="bopenoffers" finished-at="2022-10-10T16:26:50 IST" duration-ms="6199" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bopenoffers -->
-        <test-method signature="cclickoffer()[pri:0, instance:dynamic.Flipkartdynamic@59fd97a8]" started-at="2022-08-25T15:30:09 IST" name="cclickoffer" finished-at="2022-08-25T15:30:09 IST" duration-ms="172" status="PASS">
+        <test-method signature="cclickoffer()[pri:0, instance:dynamic.Flipkartdynamic@1da2cb77]" started-at="2022-10-10T16:26:50 IST" name="cclickoffer" finished-at="2022-10-10T16:26:50 IST" duration-ms="112" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cclickoffer -->
-        <test-method signature="openproduct()[pri:0, instance:dynamic.Flipkartdynamic@59fd97a8]" started-at="2022-08-25T15:30:09 IST" name="openproduct" finished-at="2022-08-25T15:30:11 IST" duration-ms="2288" status="PASS">
+        <test-method signature="openproduct()[pri:0, instance:dynamic.Flipkartdynamic@1da2cb77]" started-at="2022-10-10T16:26:50 IST" name="openproduct" finished-at="2022-10-10T16:26:55 IST" duration-ms="5258" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openproduct -->
-        <test-method signature="share()[pri:0, instance:dynamic.Flipkartdynamic@59fd97a8]" started-at="2022-08-25T15:30:11 IST" name="share" finished-at="2022-08-25T15:30:16 IST" duration-ms="4188" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- share -->
-        <test-method is-config="true" signature="terminate()[pri:0, instance:dynamic.Flipkartdynamic@59fd97a8]" started-at="2022-08-25T15:30:16 IST" name="terminate" finished-at="2022-08-25T15:30:16 IST" duration-ms="329" status="PASS">
+        <test-method is-config="true" signature="terminate()[pri:0, instance:dynamic.Flipkartdynamic@1da2cb77]" started-at="2022-10-10T16:26:55 IST" name="terminate" finished-at="2022-10-10T16:26:56 IST" duration-ms="831" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- terminate -->
       </class> <!-- dynamic.Flipkartdynamic -->
-    </test> <!-- Testcasechrome -->
-    <test started-at="2022-08-25T15:30:16 IST" name="Testcasefirefox" finished-at="2022-08-25T15:30:49 IST" duration-ms="33144">
-      <class name="dynamic.Flipkartdynamic">
-        <test-method is-config="true" signature="differtbrowser(java.lang.String)[pri:0, instance:dynamic.Flipkartdynamic@3a93b025]" started-at="2022-08-25T15:30:16 IST" name="differtbrowser" finished-at="2022-08-25T15:30:20 IST" duration-ms="3944" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[firefox]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- differtbrowser -->
-        <test-method signature="aflipkartopen()[pri:0, instance:dynamic.Flipkartdynamic@3a93b025]" started-at="2022-08-25T15:30:20 IST" name="aflipkartopen" finished-at="2022-08-25T15:30:35 IST" duration-ms="15060" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- aflipkartopen -->
-        <test-method signature="bopenoffers()[pri:0, instance:dynamic.Flipkartdynamic@3a93b025]" started-at="2022-08-25T15:30:35 IST" name="bopenoffers" finished-at="2022-08-25T15:30:41 IST" duration-ms="6106" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- bopenoffers -->
-        <test-method signature="cclickoffer()[pri:0, instance:dynamic.Flipkartdynamic@3a93b025]" started-at="2022-08-25T15:30:41 IST" name="cclickoffer" finished-at="2022-08-25T15:30:41 IST" duration-ms="361" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cclickoffer -->
-        <test-method signature="openproduct()[pri:0, instance:dynamic.Flipkartdynamic@3a93b025]" started-at="2022-08-25T15:30:41 IST" name="openproduct" finished-at="2022-08-25T15:30:44 IST" duration-ms="2245" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openproduct -->
-        <test-method signature="share()[pri:0, instance:dynamic.Flipkartdynamic@3a93b025]" started-at="2022-08-25T15:30:44 IST" name="share" finished-at="2022-08-25T15:30:48 IST" duration-ms="4149" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- share -->
-        <test-method is-config="true" signature="terminate()[pri:0, instance:dynamic.Flipkartdynamic@3a93b025]" started-at="2022-08-25T15:30:48 IST" name="terminate" finished-at="2022-08-25T15:30:49 IST" duration-ms="1265" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- terminate -->
-      </class> <!-- dynamic.Flipkartdynamic -->
-    </test> <!-- Testcasefirefox -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

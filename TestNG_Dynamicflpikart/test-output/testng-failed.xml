@@ -1,28 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Testcasechrome(failed)">
-    <parameter name="browser" value="chrome"/>
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
       <class name="dynamic.Flipkartdynamic">
         <methods>
           <include name="terminate"/>
-          <include name="share"/>
+          <include name="openproduct"/>
+          <include name="cclickoffer"/>
+          <include name="bopenoffers"/>
+          <include name="aflipkartopen"/>
           <include name="differtbrowser"/>
         </methods>
       </class> <!-- dynamic.Flipkartdynamic -->
     </classes>
-  </test> <!-- Testcasechrome(failed) -->
-  <test thread-count="5" name="Testcasefirefox(failed)">
-    <parameter name="browser" value="firefox"/>
-    <classes>
-      <class name="dynamic.Flipkartdynamic">
-        <methods>
-          <include name="terminate"/>
-          <include name="share"/>
-          <include name="differtbrowser"/>
-        </methods>
-      </class> <!-- dynamic.Flipkartdynamic -->
-    </classes>
-  </test> <!-- Testcasefirefox(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

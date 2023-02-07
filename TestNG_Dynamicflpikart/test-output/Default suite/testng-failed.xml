@@ -5,7 +5,6 @@
     <classes>
       <class name="dynamic.Flipkartdynamic">
         <methods>
-          <include name="eaddtocart"/>
           <include name="terminate"/>
           <include name="openproduct"/>
           <include name="cclickoffer"/>

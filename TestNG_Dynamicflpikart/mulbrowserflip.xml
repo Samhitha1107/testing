@@ -7,10 +7,5 @@
       <class name="dynamic.Flipkartdynamic"/>
     </classes>
   </test> <!-- Test -->
-   <test thread-count="5" name="Testcasefirefox">
-  <parameter name="browser" value="firefox"></parameter>
-    <classes>
-      <class name="dynamic.Flipkartdynamic"/>
-    </classes>
-  </test> <!-- Test -->
+   
 </suite> <!-- Suite -->

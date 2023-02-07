@@ -5,9 +5,11 @@
     <classes>
       <class name="demo2.AssertAmazon">
         <methods>
-          <include name="zzterminate"/>
+          <include name="searchbutton"/>
           <include name="cart"/>
           <include name="setup"/>
+          <include name="search"/>
+          <include name="amazonopne"/>
         </methods>
       </class> <!-- demo2.AssertAmazon -->
     </classes>

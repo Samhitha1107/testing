@@ -1,5 +1,7 @@
 package dynamic;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Set;
 import java.util.StringJoiner;
@@ -7,10 +9,13 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -23,25 +28,18 @@ public class Flipkartdynamic {
 	
 	WebDriver driver = null;
 	
-	@BeforeTest
-	@Parameters("browser")
-	public void differtbrowser(String browserName) {
-		if(browserName.equalsIgnoreCase("chrome"))
-		{
-			System.setProperty("webdriver.chrome.driver", "C:\\\\Users\\\\Drivers\\\\chromedriver.exe");
-			driver =  new ChromeDriver();
-			
+	
+	   @BeforeTest
+	    public void setup() {
+	        @SuppressWarnings("unused")
+	        String
+	        projectPath = System.getProperty("user.dir");
 
-
-		}
-		else if(browserName.equalsIgnoreCase("firefox"))
-		{
-			System.setProperty("webdriver.gecko.driver", "C:\\Users\\Admin\\Desktop\\SAMHITHA\\Selenium\\alldrivers\\geckodriver.exe");
-		    driver = new FirefoxDriver();
-		    
-			
-		}
-	}
+	        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Drivers\\chromedriver.exe");
+	        driver = new ChromeDriver();
+	        driver.manage().window().maximize();
+	    }
+ 
 	
 	
 	@Test
@@ -76,7 +74,7 @@ public class Flipkartdynamic {
 		
 		//to open flute
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		WebElement ele = driver.findElement(By.xpath("(//div[contains(text(),'Flutes')])"));
+		WebElement ele = driver.findElement(By.xpath("//*[@id=\"container\"]/div/div[3]/div[2]/div/div[1]/div/div/a"));
 		Thread.sleep(2000, 30);
 		@SuppressWarnings("unused")
 		String text = ele.getText();
@@ -94,7 +92,7 @@ public class Flipkartdynamic {
 	@Test
 	public void cclickoffer() {
 		
-		driver.findElement(By.xpath("//*[@id=\"container\"]/div/div[3]/div[1]/div[2]/div[1]/div/div/div[3]/div[3]")).click();
+		driver.findElement(By.xpath("//*[@id=\"container\"]/div/div[3]/div/div/div[2]/div[10]/a/div[2]")).click();
 		
 		String expected1 = driver.getCurrentUrl();
 		String actualURL1 = driver.getCurrentUrl();
@@ -106,7 +104,7 @@ public class Flipkartdynamic {
 	
 	@Test
 	public void openproduct() throws InterruptedException {
-		WebElement product = driver.findElement(By.xpath("//a[contains(text(),'Foxit Musical Professional Flutes Acrylic Bansuri ')]"));
+		WebElement product = driver.findElement(By.xpath("//*[@id=\"container\"]/div/div[3]/div/div[2]/div[4]/div/div[4]/div/div[2]/a[1]"));
 		String test = product.getText();
 		JavascriptExecutor jse = (JavascriptExecutor) driver;
 		jse.executeScript("arguments[0].click()", product);
@@ -122,43 +120,14 @@ public class Flipkartdynamic {
 		System.out.println("Assert product open passed");
 	}
 	
-	@Parameters("browser")
-	@Test
-	public void share() throws InterruptedException {
-		
-	WebElement share = driver.findElement(By.xpath("/html/body/div[1]/div/div[3]/div[1]/div[2]/div[5]/div/div/div[1]/div[2]/div/div[2]/div[1]/form/input"));
-	share.sendKeys("560028");
-	String text = share.getText();
-	JavascriptExecutor jse1 = (JavascriptExecutor) driver;
-	jse1.executeScript("arguments[0].click()", share);
-	Thread.sleep(4000, 30);
 	
-//	WebElement check = driver.findElement(By.xpath("/html/body/div[1]/div/div[3]/div[1]/div[2]/div[5]/div/div/div[1]/div[2]/div/div[2]/div[1]/span"));
-//	check.click();
-//	String text1 = check.getText();
-//	JavascriptExecutor jse2 = (JavascriptExecutor) driver;
-//	jse1.executeScript("arguments[0].click()", check);
-//	Thread.sleep(4000, 30);
-	
-	
-//	//*[@id="container"]/div/div[3]/div[1]/div[2]/div[5]/div/div/div[2]/div[2]/span
-//	
-//	WebElement viewdetails = driver.findElement(By.xpath("/html/body/div[1]/div/div[3]/div[1]/div[1]/div[2]/div/ul/li[1]/button/svg"));
-//	viewdetails.click();
-//	String text11 = viewdetails.getText();
-//	JavascriptExecutor jse21 = (JavascriptExecutor) driver;
-//	jse1.executeScript("arguments[0].click()", viewdetails);
-//	Thread.sleep(4000, 30);
-//	
-	
-	}
-	
-
 	
 	@AfterTest
 	public void terminate() {
 		driver.close();
 		driver.quit();
+		
+		
 	}
 	
 	

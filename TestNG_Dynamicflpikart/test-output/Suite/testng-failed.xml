@@ -7,22 +7,10 @@
       <class name="dynamic.Flipkartdynamic">
         <methods>
           <include name="terminate"/>
-          <include name="share"/>
+          <include name="openproduct"/>
           <include name="differtbrowser"/>
         </methods>
       </class> <!-- dynamic.Flipkartdynamic -->
     </classes>
   </test> <!-- Testcasechrome(failed) -->
-  <test thread-count="5" name="Testcasefirefox(failed)">
-    <parameter name="browser" value="firefox"/>
-    <classes>
-      <class name="dynamic.Flipkartdynamic">
-        <methods>
-          <include name="terminate"/>
-          <include name="share"/>
-          <include name="differtbrowser"/>
-        </methods>
-      </class> <!-- dynamic.Flipkartdynamic -->
-    </classes>
-  </test> <!-- Testcasefirefox(failed) -->
 </suite> <!-- Failed suite [Suite] -->
